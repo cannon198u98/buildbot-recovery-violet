@@ -18,12 +18,6 @@ up(){
 	curl --upload-file $1 https://transfer.sh/
 }
 
-make_metalava(){
-	mka api-stubs-docs
-	mka system-api-stubs-docs
-	mka test-api-stubs-docs
-}
-
 make_rom(){
 	mka recoveryimage
 	zip=$(up out/target/product/violet/*.img) #make sure to edit miatoll---> your device
@@ -31,6 +25,5 @@ make_rom(){
 	echo "$zip"
 }
 
-make_metalava
 make_rom &
 sleep 4500 && kill "$!"
