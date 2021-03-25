@@ -4,7 +4,9 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 source build/envsetup.sh
-lunch nad_violet-userdebug # edit this to your device stuff
+lunch omni_violet-eng
+export LC_ALL="C"
+export ALLOW_MISSING_DEPENDENCIES=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -23,7 +25,7 @@ make_metalava(){
 }
 
 make_rom(){
-	mka nad -j16
+	mka recoveryimage
 	zip=$(up out/target/product/violet/*zip) #make sure to edit miatoll---> your gay device
 	echo " "
 	echo "$zip"
