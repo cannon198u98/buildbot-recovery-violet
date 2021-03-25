@@ -20,7 +20,7 @@ up(){
 
 make_rom(){
 	mka recoveryimage
-	zip=$(up out/target/product/violet/*.img) #make sure to edit miatoll---> your device
+	zip=$(up out/target/product/violet/recovery.img) #make sure to edit miatoll --> your device
 	echo " "
 	echo "$zip"
 }
