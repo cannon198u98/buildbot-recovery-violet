@@ -26,7 +26,7 @@ make_metalava(){
 
 make_rom(){
 	mka recoveryimage
-	zip=$(up out/target/product/violet/*zip) #make sure to edit miatoll---> your gay device
+	zip=$(up out/target/product/violet/*zip) #make sure to edit miatoll---> your device
 	echo " "
 	echo "$zip"
 }
