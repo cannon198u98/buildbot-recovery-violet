@@ -15,4 +15,4 @@ ccache -o compression=true
 ccache -z
 mka recoveryimage
 curl bashupload.com -T out/target/product/violet/*zip
-curl bashupload.com -T out/target/product/violet/*img
+curl bashupload.com -T out/target/product/violet/recovery.img
